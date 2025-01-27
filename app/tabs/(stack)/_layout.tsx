@@ -9,8 +9,10 @@ export default function StackLayout() {
         headerShadowVisible: false,
         contentStyle: {
           backgroundColor: "white",
-          padding: 20
         },
+        headerStyle:{
+          backgroundColor: "#f6f6f6"
+        }
       }}>
         <Stack.Screen name="home/index" options={{
           title: "Inicio",
