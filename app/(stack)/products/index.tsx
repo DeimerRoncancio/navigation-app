@@ -1,9 +1,20 @@
-import { Text, View } from "react-native";
+import { products } from "@/store/products.store";
+import { Link } from "expo-router";
+import { FlatList, Text, View } from "react-native";
 
 export default function ProductsScreen() {
   return (
     <View>
-      <Text>Productos</Text>
+      <FlatList data={products} renderItem={({item}) => (
+        <View className="mb-6">
+          <Text className="text-xl font-medium">{item.title}</Text>
+          <Text className="text-violet-700">$ {item.price}</Text>
+          <Text className="text-xs mt-1 mb-2">{item.description}</Text>
+          <Link href={`/(stack)/products/${item.id}`}>
+            <Text className="text-violet-950">Ver detalles</Text>
+          </Link>
+        </View>
+      )} />
     </View>
-  )
-}
+  );
+};

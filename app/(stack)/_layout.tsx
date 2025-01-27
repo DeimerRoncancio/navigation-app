@@ -9,7 +9,7 @@ export default function StackLayout() {
         headerShadowVisible: false,
         contentStyle: {
           backgroundColor: "white",
-          padding: 20 
+          padding: 20
         },
       }}>
         <Stack.Screen name="home/index" options={{

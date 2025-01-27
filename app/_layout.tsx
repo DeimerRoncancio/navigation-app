@@ -1,6 +1,6 @@
 import { Slot } from 'expo-router';
 import './global.css';
-import { Platform } from 'react-native';
+import { Platform, View } from 'react-native';
 
 import * as NavigationBar from 'expo-navigation-bar';
 
@@ -9,6 +9,6 @@ if (isAndroid) NavigationBar.setBackgroundColorAsync('transparent');
 
 export default function RootLayout() {
   return (
-  <Slot />
-);
+    <Slot />
+  );
 }
