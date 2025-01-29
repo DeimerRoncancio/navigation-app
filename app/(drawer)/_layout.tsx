@@ -5,7 +5,6 @@ import CustomDrawer from "@/components/shared/CustomDrawer";
 export default function DrawerLayout() {
   return (
     <Drawer drawerContent={CustomDrawer} screenOptions={{
-      headerShown: false,
       drawerActiveTintColor: "indigo",
       headerShadowVisible: false,
       sceneStyle: {
@@ -34,6 +33,7 @@ export default function DrawerLayout() {
         name="(tabs)"
         options={{
           drawerLabel: 'Tabs',
+          headerShown: false,
           title: 'Tabs',
           drawerIcon: ({ color, size }) =>
             <Ionicons name="albums" size={size} color={color} />
