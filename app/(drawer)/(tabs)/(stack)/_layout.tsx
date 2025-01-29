@@ -8,7 +8,7 @@ export default function StackLayout() {
   const navigation = useNavigation();
 
   const onHeaderLeftClick = () => {
-    navigation.dispatch( DrawerActions.toggleDrawer() );
+    navigation.dispatch( DrawerActions.toggleDrawer );
   };
 
   return (
