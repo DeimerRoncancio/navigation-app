@@ -1,4 +1,3 @@
-import { Text } from "react-native";
 import { Drawer } from 'expo-router/drawer';
 import { Ionicons } from "@expo/vector-icons";
 import CustomDrawer from "@/components/shared/CustomDrawer";
@@ -6,6 +5,7 @@ import CustomDrawer from "@/components/shared/CustomDrawer";
 export default function DrawerLayout() {
   return (
     <Drawer drawerContent={CustomDrawer} screenOptions={{
+      headerShown: false,
       drawerActiveTintColor: "indigo",
       headerShadowVisible: false,
       sceneStyle: {
@@ -13,21 +13,30 @@ export default function DrawerLayout() {
       }
     }}>
       <Drawer.Screen
-        name="user/index" // This is the name of the page and must match the url from root
+        name="user/index"
         options={{
           drawerLabel: 'User',
-          title: 'overview',
+          title: 'User',
           drawerIcon: ({ color, size }) =>
             <Ionicons name="person" size={size} color={color} />
         }}
       />
       <Drawer.Screen
-        name="schedule/index" // This is the name of the page and must match the url from root
+        name="schedule/index"
         options={{
           drawerLabel: 'Schedule',
-          title: 'overview',
+          title: 'Calendario',
           drawerIcon: ({ color, size }) =>
             <Ionicons name="calendar" size={size} color={color} />
+        }}
+      />
+      <Drawer.Screen
+        name="(tabs)"
+        options={{
+          drawerLabel: 'Tabs',
+          title: 'Tabs',
+          drawerIcon: ({ color, size }) =>
+            <Ionicons name="albums" size={size} color={color} />
         }}
       />
     </Drawer>

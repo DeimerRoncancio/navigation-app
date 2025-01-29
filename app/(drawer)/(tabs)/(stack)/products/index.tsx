@@ -10,7 +10,7 @@ export default function ProductsScreen() {
             <Text className="text-2xl font-medium">{item.title}</Text>
             <Text className="text-violet-700">$ {item.price}</Text>
             <Text className="text-sm mt-1 mb-2">{item.description}</Text>
-            <Link href={`/tabs/(stack)/products/${item.id}`}>
+            <Link href={`/products/${item.id}`}>
               <Text className="text-violet-950">Ver detalles</Text>
             </Link>
           </View>
